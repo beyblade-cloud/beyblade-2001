@@ -1,0 +1,90 @@
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body bgcolor="#000000" text="#ffffff" alink="#ff0000" vlink="#77b6d5" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" stats=1>
+
+    {%- include header.html -%}
+
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        {% if page.header-title == "home" %}
+        <td><img src="{{ "chrome/header-logo.gif" | relative_url }}" width="162" height="50"></td>
+        {% else %}
+        <td><a href="{{ "index.html" | relative_url }}" onMouseOver="on('home'); return showStatus('Home');" onMouseOut="off('home');" title="Home"><img src="{{ "chrome/header-logo.gif" | relative_url }}" width="162" height="50" border="0" alt=" [ Beyblade :: Home ] "></a></td>
+        {% endif %}
+        <td background="{{ "chrome/header-bg.gif" | relative_url }}" width="100%"><img src="{{ "common/spacer.gif" | relative_url }}" width="448" height="50"></td>
+        <td><img src="{{ "chrome/header-title-" | append: page.header-title | append: ".gif" | relative_url }}" width="181" height="50"></td>
+      </tr>
+    
+    </table>
+    
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    
+      <tr>
+      <td background="{{ "chrome/nav-bg.gif" | relative_url }}" width="162" height="100%" valign="top" align="center">
+        {% if page.header-title == "home" %}
+        <img src="{{ "chrome/nav-logo.gif" | relative_url }}" width="162" height="88">
+        {% else %}
+        <a href="{{ "index.html" | relative_url }}" onMouseOver="on('home'); return showStatus('Home');" onMouseOut="off('home');" title="Home">
+          <img src="{{ "chrome/nav-logo.gif" | relative_url }}" width="162" height="88" border="0" alt=" [ Beyblade :: Home ] ">
+        </a>
+        {% endif %}
+        <br>
+        <a href="{{ "links.html" | relative_url }}"class="nav-btn">
+          <div>links</div>
+        </a>
+        <a href="{{ "fun.html" | relative_url }}"class="nav-btn">
+          <div>fun</div>
+        </a>
+        <a href="{{ "events.html" | relative_url }}"class="nav-btn">
+          <div>events</div>
+        </a>
+        <a href="{{ "tv.html" | relative_url }}"class="nav-btn">
+          <div>television</div>
+        </a>
+        <a href="{{ "clickthrough.html?name=Hasbro&target=http://www.hasbro.com/beyblade" | relative_url }}" target="_blank" class="nav-btn">
+          <div>gear</div>
+        </a>
+        <br>
+      </td>
+      <td width="100%" valign="top" bgcolor="#000000">
+    
+
+    {{ content }}
+
+
+  </td>
+  <td valign="top" background="{{ "chrome/gadget-bg.gif" | relative_url }}">
+
+<!-- Go, go Gadgets! -->
+{% if page.header-title == "home" %}
+{%- include gadget-home.html -%}
+{% else %}
+{%- include gadget-other.html -%}
+{% endif %}
+
+<!-- No, no Gadgets! -->
+
+  </td>
+  </tr>
+
+</table>
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+  <tr>
+  <td><img src="{{ "chrome/footer-01.gif" | relative_url }}" width="162" height="27"></td>
+  <td background="{{ "chrome/footer-02.gif" | relative_url }}" width="100%"><img src="{{ "common/spacer.gif" | relative_url }}" width="417" height="27"></td>
+  <td><img src="{{ "chrome/footer-03.gif" | relative_url }}" width="181" height="27"></td>
+  </tr>
+
+</table>
+    
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

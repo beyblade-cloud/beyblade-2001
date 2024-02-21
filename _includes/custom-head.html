@@ -1,0 +1,74 @@
+{% comment %}
+  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+
+  1. Head over to https://realfavicongenerator.net/ to add your own favicons.
+  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
+{% endcomment %}
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function launchBeyblade() {
+  link = window.open('http://www.ytv.com/games/beyblade/beyblade.swf',"","width=550,height=435,toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=0");
+} 
+
+// -->
+</script>
+<script language="Javascript" src="functions.js" type="text/javascript"></script>
+
+<script>
+var bolIsPlaying;
+function videoPlay()
+{
+  objMediaPlayer.Play();
+  bolIsPlaying = true;
+}
+
+
+</script>
+
+<style type="text/css">
+<!--
+input {
+  background: none;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  border: 0px;
+}
+-->
+@font-face {
+    font-family: fungfoo;
+    src: url({{ "assets/fungfoo.ttf" | relative_url }});
+}
+
+.nav-btn {
+          font-family: fungfoo;
+          color: forestgreen;
+          font-size: 0.8em;
+          text-align: right;
+          text-decoration: none;
+          margin-top: 15;
+          display: block;
+}
+
+.nav-btn div{
+          padding-right: 10;
+          padding-top: 14;
+          width: 115;
+          height: 20;
+          margin: 0 auto;
+          background-image: url({{ "chrome/nav-btn-bg.png" | relative_url }});
+}
+
+</style>
+
+
+
+<script language="JavaScript">
+<!--
+function enter_code() {
+  link = window.open('http://www.beyblade.com/promos/BK_spin_champs/enter_code.asp',"","width=550,height=400,toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=0");
+} 
+
+// -->
+</script>

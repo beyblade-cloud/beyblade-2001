@@ -1,0 +1,54 @@
+---
+title: "You are now leaving Beyblade.com"
+layout: popup
+---
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function linkOutside(URL) {
+	window.opener.location  = URL;
+	window.close();
+}
+// -->
+</script>
+
+<script language="Javascript" src="{{ "functions.js" | relative_url }}" type="text/javascript"></script>
+
+<p class="headline">You are now leaving Beyblade.com</p>
+
+<p>When you click the link at the bottom, you'll jump to a new site. We don't control the content there, so play it cool - and play it
+safe. Check out the privacy policy and other terms and conditions, and NEVER share personal info (name, address, phone
+number, etc.) online without your parents' OK. That stuff is YOUR business, nobody else's!</p>
+
+<p>So have fun on the 'net, and come back soon for all the hottest BEYBLADE news!</p>
+
+
+<p>Please keep our <a href="safety.html" title="Web Safety">Web Safety Tips</a>
+in mind.</p>
+
+<p><b>WARNING: Do not use BEYBLADE tops or Beystadium (TM) on tables or other elevated surfaces.</b><br><br>
+
+<b>BEYBLADE tops/BEYSTADIUM are intended to be used on the floor.  
+Do not lean over the stadium when BEYBLADE tops are in play.
+BEYBLADE tops may bounce up and hit eye or face.</b> <br><br>
+
+<b>AGES 8+</b><br><br>
+
+<b>Hasbro BEYBLADE tops, launchers and stadiums are only to be used with other official Hasbro BEYBLADE tops, launchers and Stadiums. Never use with non-official product.</b>
+
+</p>
+
+
+
+<p class="right"><a id="extLink" href="javascript:linkOutside('http://www.hasbro.com/beyblade/')" title="Hasbro">Click here to proceed to Hasbro</a>.</p>
+
+<script>
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var name = url.searchParams.get("name");
+var target = url.searchParams.get("target");
+document.getElementById("extLink").href = target;
+document.getElementById("extLink").title = name;
+document.getElementById("extLink").innerHTML = "Click here to proceed to " + name
+</script>
